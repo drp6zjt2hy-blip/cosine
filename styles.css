@@ -83,6 +83,7 @@ body.nav-open .menu-toggle .icon-close { display: block; }
   position: relative; border-radius: var(--radius); overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--line);
+  min-height: 160px; /* safety net: keeps the box visible even if aspect-ratio isn't supported */
 }
 .photo svg.fallback-art { position: absolute; inset: 0; width: 100%; height: 100%; }
 .photo img.real {
