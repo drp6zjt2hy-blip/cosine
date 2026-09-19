@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosine Ventures Ltd — Private Lending, Kampala</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .hero-grid { display: grid; grid-template-columns: 0.9fr 1.2fr; gap: 48px; align-items: center; }
+  .kicker { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: var(--accent-deep); margin: 0 0 14px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .hero h1 { font-size: clamp(2.2rem, 4vw, 3.1rem); line-height: 1.05; max-width: 12.5ch; }
+  .hero p.lede { margin-top: 16px; font-size: 1.06rem; color: var(--ink-soft); max-width: 44ch; }
+  .hero-ctas { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+  .hero-figure { position: relative; aspect-ratio: 3/2; }
+  .glass-filter-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+  .liquid-glass {
+    transition: transform .35s cubic-bezier(0.1,0.4,0.2,1), box-shadow .35s ease, border-color .35s ease, backdrop-filter .35s ease;
+    cursor: default;
+  }
+  .liquid-glass:hover {
+    transform: scale(1.06);
+    border-color: var(--accent-soft);
+    box-shadow: 0 14px 34px rgba(0,0,0,0.65), 0 0 0 1px rgba(244,196,48,0.4);
+    backdrop-filter: url(#cosine-liquid-glass) blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+  }
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .pillar {
+    padding: 18px 18px 20px; border-radius: var(--radius);
+    border: 1px solid transparent;
+    transition: background .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease, backdrop-filter .2s ease;
+  }
+  .pillar:hover {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border-color: rgba(244,196,48,0.35);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+  .pillar .ic { width: 34px; height: 34px; border-radius: 8px; background: var(--surface-2); display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+  .pillar h3 { font-size: 1.02rem; margin-bottom: 6px; }
+  .pillar p { font-size: 0.9rem; color: var(--ink-soft); margin: 0; }
+  .cta-banner { display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--accent); color: #16130D; border-radius: var(--radius); padding: 34px 38px; flex-wrap: wrap; }
+  .cta-banner h2 { color: #16130D; font-size: 1.5rem; max-width: 20ch; }
+  .cta-banner .btn-primary { background: #16130D; color: var(--accent-soft); }
+  .cta-banner .btn-primary:hover { background: #000; }
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-figure { order: -1; max-width: 460px; margin: 0 auto; }
+    .pillars { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) { .pillars { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="index.html" class="brand">
+      <svg class="mark" viewBox="0 0 28 28" fill="none"><path d="M14 1 L27 14 L14 27 Z" fill="var(--accent)"/><path d="M14 1 L1 14 L14 27 Z" fill="var(--ink)"/><path d="M14 1 L14 27" stroke="var(--bg)" stroke-width="1"/></svg>
+      Cosine Ventures
+    </a>
+    <nav class="links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="loans.html">Loans</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="board.html">Board</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-ctas">
+      <a class="whatsapp-btn" href="https://wa.me/256701186473" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="#25D366"><path d="M16.001 3C9.373 3 4 8.373 4 15.001c0 2.386.63 4.62 1.727 6.555L4 29l7.617-1.688A11.94 11.94 0 0 0 16.001 27C22.63 27 28 21.63 28 15.001 28 8.373 22.63 3 16.001 3zm6.937 17.14c-.293.824-1.45 1.508-2.375 1.703-.634.133-1.462.24-4.248-.912-3.564-1.474-5.858-5.09-6.037-5.327-.176-.238-1.44-1.918-1.44-3.66 0-1.74.9-2.596 1.222-2.951.293-.322.71-.418 1.107-.418.207 0 .414.012.6.021.192.008.45-.073.703.535.293.703.994 2.435 1.081 2.612.088.176.147.383.03.62-.117.238-.176.383-.351.588-.176.207-.37.46-.528.617-.176.176-.36.367-.155.72.207.352.918 1.514 1.968 2.451 1.352 1.207 2.492 1.582 2.844 1.758.352.176.557.147.762-.09.207-.238.879-1.023 1.117-1.375.234-.352.469-.293.79-.176.322.117 2.05.967 2.402 1.143.352.176.586.264.674.41.088.147.088.85-.207 1.673z"/></svg>
+      </a>
+      <a class="call-pill" href="tel:+256701186473">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +256 701 186473
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Kampala · Private lending</p>
+        <h1 class="hero">A quieter way to borrow, for people who've earned the right to be trusted.</h1>
+        <p class="lede">Cosine Ventures arranges lending the way it used to be done. One conversation, one decision-maker. You understand terms before you sign. No portals. No queues. No guesswork.</p>
+        <div class="hero-ctas">
+          <a href="tel:+256701186473" class="btn btn-primary">Call +256 701 186473</a>
+          <a href="https://wa.me/256701186473" target="_blank" rel="noopener" class="btn btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.373 3 4 8.373 4 15.001c0 2.386.63 4.62 1.727 6.555L4 29l7.617-1.688A11.94 11.94 0 0 0 16.001 27C22.63 27 28 21.63 28 15.001 28 8.373 22.63 3 16.001 3zm6.937 17.14c-.293.824-1.45 1.508-2.375 1.703-.634.133-1.462.24-4.248-.912-3.564-1.474-5.858-5.09-6.037-5.327-.176-.238-1.44-1.918-1.44-3.66 0-1.74.9-2.596 1.222-2.951.293-.322.71-.418 1.107-.418.207 0 .414.012.6.021.192.008.45-.073.703.535.293.703.994 2.435 1.081 2.612.088.176.147.383.03.62-.117.238-.176.383-.351.588-.176.207-.37.46-.528.617-.176.176-.36.367-.155.72.207.352.918 1.514 1.968 2.451 1.352 1.207 2.492 1.582 2.844 1.758.352.176.557.147.762-.09.207-.238.879-1.023 1.117-1.375.234-.352.469-.293.79-.176.322.117 2.05.967 2.402 1.143.352.176.586.264.674.41.088.147.088.85-.207 1.673z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="hero-figure photo">
+        <svg class="fallback-art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="400" height="500" fill="#0B0A08"/>
+          <path d="M0 500 L0 320 Q100 260 210 300 Q300 332 400 250 L400 500 Z" fill="#1F1A12"/>
+          <path d="M140 500 V360 Q140 258 220 258 Q298 258 298 360 V500 Z" fill="#6B4A28"/>
+          <circle cx="220" cy="188" r="58" fill="#6B4A28"/>
+          <path d="M164 172 Q164 126 220 126 Q276 126 276 172 V186 Q220 202 164 186 Z" fill="#0B0A08"/>
+          <rect x="192" y="225" width="56" height="32" rx="10" fill="#6B4A28"/>
+          <path d="M300 500 V430 Q300 330 220 330 Q170 330 150 360" stroke="#F4C430" stroke-width="1" fill="none" opacity="0.4"/>
+        </svg>
+        <img class="real" src="images/hero.jpg" alt="A Cosine Ventures client in a consultation" onerror="this.style.display='none'">
+        <div class="photo-caption liquid-glass">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg>
+          Decisions made the day you call
+        </div>
+      </div>
+
+      <svg class="glass-filter-defs" aria-hidden="true">
+        <defs>
+          <filter id="cosine-liquid-glass" x="-20%" y="-20%" width="140%" height="140%" colorInterpolationFilters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="1" seed="4" result="turbulence"/>
+            <feGaussianBlur in="turbulence" stdDeviation="2" result="blurredNoise"/>
+            <feDisplacementMap in="SourceGraphic" in2="blurredNoise" scale="18" xChannelSelector="R" yChannelSelector="B"/>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <span>Mirembe Business Centre, Lugogo Bypass, Kampala</span>
+      <span class="dot">·</span>
+      <span>In person, by phone, or on WhatsApp. No online account needed</span>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head">
+        <div><p class="eyebrow">Why Cosine</p><h2>Lending, done the way it should feel.</h2></div>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-deep)" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Answers, not queues</h3>
+          <p>Most applications are reviewed and answered the same day you walk in or call. Not "we'll get back to you."</p>
+        </div>
+        <div class="pillar">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-deep)" stroke-width="1.8"><path d="M12 21c4-3 8-6.5 8-11a8 8 0 1 0-16 0c0 4.5 4 8 8 11z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Terms explained plainly</h3>
+          <p>Every number is walked through in person before you commit to anything. Nothing buried in fine print.</p>
+        </div>
+        <div class="pillar">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-deep)" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+          <h3>Rooted in Kampala</h3>
+          <p>We're a Kampala company lending to the traders, salaried staff and families around us. Not a distant call centre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="border-bottom:none;">
+    <div class="wrap">
+      <div class="cta-banner">
+        <h2>Ready to talk about what's possible?</h2>
+        <a href="tel:+256701186473" class="btn btn-primary">Call +256 701 186473</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand">Cosine Ventures Ltd</div>
+      <div class="foot-addr">Mirembe Business Centre, Lugogo Bypass, Kampala, Uganda</div>
+      <div class="foot-links"><a href="loans.html">Loans</a><a href="board.html">Board</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+    </div>
+    <div class="foot-note">Terms are confirmed individually with each borrower before any agreement is signed.</div>
+  </div>
+</footer>
+
+</body>
+</html>
