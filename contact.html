@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Cosine Ventures Ltd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .page-hero h1 { font-size: clamp(2rem, 3.6vw, 2.7rem); max-width: 14ch; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }
+  .contact-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .contact-list li { display: flex; gap: 14px; align-items: center; padding: 14px 15px; border: 1px solid var(--line); border-radius: var(--radius-sm); transition: border-color .15s ease; }
+  .contact-list li:hover { border-color: var(--accent); }
+  .contact-list .ic { flex: none; width: 19px; height: 19px; color: var(--accent-deep); }
+  .contact-list a { text-decoration: none; }
+  .contact-list a:hover { color: var(--accent-deep); }
+  .contact-list .lbl { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: var(--ink-soft); display: block; margin-bottom: 2px; }
+  .contact-list .val { font-size: 0.98rem; }
+  .hours-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; }
+  .hours-card h3 { font-size: 0.96rem; margin-bottom: 12px; }
+  .hours-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px dashed var(--line); font-size: 0.88rem; }
+  .hours-row:last-child { border-bottom: none; }
+  .hours-row .d { color: var(--ink-soft); }
+  .office-photo { aspect-ratio: 16/9; margin-top: 16px; }
+  .map-embed { aspect-ratio: 16/9; margin-top: 16px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); filter: grayscale(0.3) contrast(1.05); }
+  .map-embed iframe { width: 100%; height: 100%; display: block; border: 0; }
+  .directions-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; }
+  @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="index.html" class="brand">
+      <svg class="mark" viewBox="0 0 28 28" fill="none"><path d="M14 1 L27 14 L14 27 Z" fill="var(--accent)"/><path d="M14 1 L1 14 L14 27 Z" fill="var(--ink)"/><path d="M14 1 L14 27" stroke="var(--bg)" stroke-width="1"/></svg>
+      Cosine Ventures
+    </a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="loans.html">Loans</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="board.html">Board</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <div class="nav-ctas">
+      <a class="whatsapp-btn" href="https://wa.me/256701186473" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="#25D366"><path d="M16.001 3C9.373 3 4 8.373 4 15.001c0 2.386.63 4.62 1.727 6.555L4 29l7.617-1.688A11.94 11.94 0 0 0 16.001 27C22.63 27 28 21.63 28 15.001 28 8.373 22.63 3 16.001 3zm6.937 17.14c-.293.824-1.45 1.508-2.375 1.703-.634.133-1.462.24-4.248-.912-3.564-1.474-5.858-5.09-6.037-5.327-.176-.238-1.44-1.918-1.44-3.66 0-1.74.9-2.596 1.222-2.951.293-.322.71-.418 1.107-.418.207 0 .414.012.6.021.192.008.45-.073.703.535.293.703.994 2.435 1.081 2.612.088.176.147.383.03.62-.117.238-.176.383-.351.588-.176.207-.37.46-.528.617-.176.176-.36.367-.155.72.207.352.918 1.514 1.968 2.451 1.352 1.207 2.492 1.582 2.844 1.758.352.176.557.147.762-.09.207-.238.879-1.023 1.117-1.375.234-.352.469-.293.79-.176.322.117 2.05.967 2.402 1.143.352.176.586.264.674.41.088.147.088.85-.207 1.673z"/></svg>
+      </a>
+      <a class="call-pill" href="tel:+256701186473">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +256 701 186473
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h1>Get in touch.</h1>
+    </div>
+  </section>
+
+  <section class="block" style="border-bottom:none;">
+    <div class="wrap contact-grid">
+      <div>
+        <ul class="contact-list">
+          <li>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+256701186473"><span class="lbl">Phone</span><span class="val">+256 701 186473</span></a>
+          </li>
+          <li>
+            <svg class="ic" viewBox="0 0 32 32" fill="#25D366"><path d="M16.001 3C9.373 3 4 8.373 4 15.001c0 2.386.63 4.62 1.727 6.555L4 29l7.617-1.688A11.94 11.94 0 0 0 16.001 27C22.63 27 28 21.63 28 15.001 28 8.373 22.63 3 16.001 3zm6.937 17.14c-.293.824-1.45 1.508-2.375 1.703-.634.133-1.462.24-4.248-.912-3.564-1.474-5.858-5.09-6.037-5.327-.176-.238-1.44-1.918-1.44-3.66 0-1.74.9-2.596 1.222-2.951.293-.322.71-.418 1.107-.418.207 0 .414.012.6.021.192.008.45-.073.703.535.293.703.994 2.435 1.081 2.612.088.176.147.383.03.62-.117.238-.176.383-.351.588-.176.207-.37.46-.528.617-.176.176-.36.367-.155.72.207.352.918 1.514 1.968 2.451 1.352 1.207 2.492 1.582 2.844 1.758.352.176.557.147.762-.09.207-.238.879-1.023 1.117-1.375.234-.352.469-.293.79-.176.322.117 2.05.967 2.402 1.143.352.176.586.264.674.41.088.147.088.85-.207 1.673z"/></svg>
+            <a href="https://wa.me/256701186473" target="_blank" rel="noopener"><span class="lbl">WhatsApp</span><span class="val">Chat with us directly</span></a>
+          </li>
+          <li>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            <a href="mailto:cosineventures@gmail.com"><span class="lbl">Email</span><span class="val">cosineventures@gmail.com</span></a>
+          </li>
+          <li>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><span class="lbl">Office</span><span class="val">Mirembe Business Centre, Lugogo Bypass, Kampala</span></span>
+          </li>
+        </ul>
+        <div class="photo office-photo">
+          <svg class="fallback-art" viewBox="0 0 500 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <rect width="500" height="280" fill="#0B0A08"/>
+            <path d="M0 280 V190 Q140 150 260 185 Q380 218 500 175 V280 Z" fill="#1F1A12"/>
+            <rect x="190" y="90" width="120" height="130" fill="#6B4A28"/>
+            <rect x="210" y="110" width="30" height="30" fill="#0B0A08" opacity="0.5"/>
+            <rect x="260" y="110" width="30" height="30" fill="#0B0A08" opacity="0.5"/>
+            <rect x="225" y="170" width="50" height="50" fill="#0B0A08" opacity="0.6"/>
+          </svg>
+          <img class="real" src="images/office.jpg" alt="Cosine Ventures office exterior" onerror="this.style.display='none'">
+        </div>
+      </div>
+      <div class="hours-card">
+        <h3>When to reach us</h3>
+        <div class="hours-row"><span class="d">Monday – Friday</span><span>8:30am – 5:30pm</span></div>
+        <div class="hours-row"><span class="d">Saturday</span><span>9:00am – 1:00pm</span></div>
+        <div class="hours-row"><span class="d">Sunday</span><span>Closed</span></div>
+        <p style="margin-top:14px; font-size:0.84rem; color:var(--ink-soft);">Prefer to just show up? Mirembe Business Centre is easy to find off Lugogo Bypass. Ask for Cosine Ventures at the front desk.</p>
+
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps?q=Mirembe+Business+Centre,+Lugogo+Bypass,+Kampala,+Uganda&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map to Cosine Ventures Ltd — Mirembe Business Centre, Lugogo Bypass, Kampala"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <a class="btn btn-ghost directions-link" href="https://www.google.com/maps/dir/?api=1&destination=Mirembe+Business+Centre,+Lugogo+Bypass,+Kampala,+Uganda" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Get directions
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand">Cosine Ventures Ltd</div>
+      <div class="foot-addr">Mirembe Business Centre, Lugogo Bypass, Kampala, Uganda</div>
+      <div class="foot-links"><a href="index.html">Home</a><a href="loans.html">Loans</a><a href="board.html">Board</a><a href="about.html">About</a></div>
+    </div>
+    <div class="foot-note">Terms are confirmed individually with each borrower before any agreement is signed.</div>
+  </div>
+</footer>
+
+</body>
+</html>
